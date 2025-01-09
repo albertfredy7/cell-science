@@ -29,7 +29,7 @@ const Hero = () => {
                     />
 
                     {/* Text along the path */}
-                    <text className="font-medium">
+                    <text className="font-medium" dy={5}>
                         <textPath href="#curve1" startOffset="0%" className="animate-marquee fill-gray-600">
                             Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now!
                         </textPath>
@@ -60,7 +60,7 @@ const Hero = () => {
                         filter="url(#glow2)"
                     />
 
-                    <text className="text-[16px] font-medium">
+                    <text className="text-[16px] font-medium" dy={5}>
                         <textPath href="#curve2" startOffset="0%" className="fill-gray-600">
                             Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now!
                             Explore Now! Explore Now! Explore Now! Explore Now! Explore Now!
@@ -100,7 +100,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="custom2:max-w-3xl absolute bottom-0 left-0 right-0 mx-auto flex h-[calc(100vh-25%)] max-h-[px] w-full max-w-2xl items-end justify-center sm:max-w-lg md:max-w-xl lg:max-w-xl xl:max-w-2xl 2xl:max-w-xl">
+                    <div className="custom2:max-w-3xl absolute bottom-0 left-0 right-0 mx-auto flex h-[calc(100vh-20%)] max-h-[90vh] w-full max-w-2xl items-end justify-center sm:max-w-lg md:max-w-xl lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl">
                         <Image src="/hero.png" alt="hero" className="xs:scale-150 xs:-translate-y-20 h-fit w-auto" width={972} height={830} />
                     </div>
                 </div>
