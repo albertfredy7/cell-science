@@ -12,10 +12,10 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 z-50 w-full">
-            <div className="container mx-auto flex h-16 items-center justify-between px-4">
-                <Link href="/" className="flex items-center">
-                    <Image src="/logo.png" width={200} height={200} alt="Science" />
+        <header className="fixed top-0 z-50 w-full py-2">
+            <div className="container mx-auto   flex h-16 items-center justify-between ">
+                <Link href="/" className="flex items-center px-6">
+                    <Image src="/CellScienceLogo.png" width={200} height={200} alt="Science" />
                 </Link>
 
                 <div className="flex items-center gap-4">
@@ -24,7 +24,7 @@ export default function Header() {
                             <NavigationMenuItem className="hidden lg:block">
                                 <Link href="/science" legacyBehavior passHref>
                                     <NavigationMenuLink className="bg-transparent">
-                                        <span className="flex items-center gap-2 font-medium uppercase text-black">
+                                        <span className="flex items-center gap-2 font-medium text-sm uppercase text-black">
                                             SCIENCE
                                             <MoveUpRight className="h-3 w-3" />
                                         </span>
@@ -34,7 +34,7 @@ export default function Header() {
                         </NavigationMenuList>
                     </NavigationMenu>
 
-                    <Button variant="outline" className="hidden rounded-full border-black bg-transparent shadow-none hover:bg-transparent lg:block">
+                    <Button variant="outline" className="hidden  text-black rounded-full border-black bg-transparent text-sm px-2 shadow-none hover:bg-transparent lg:block">
                         Contact
                     </Button>
 

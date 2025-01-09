@@ -1,13 +1,14 @@
 import { CustomButton } from '@/components/CustomButton';
 import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
 const Hero = () => {
     return (
         <>
-            <section className="relative h-screen overflow-hidden">
+            <section className="relative h-screen overflow-hidden ">
                 {/* ribbon 1 */}
-                <svg width="777" height="192" viewBox="0 0 777 192" fill="none" className="absolute bottom-0 left-0 z-0 sm:-left-[25%] lg:left-0">
+                <svg width="777" height="192" viewBox="0 0 777 192" fill="none" className="absolute bottom-0 left-0 z-0 sm:-left-[25%] lg:-left-2">
                     <defs>
                         <path id="curve1" d="M7 33.6776C22.823 24.9424 80.0525 8.78236 182.386 14.0235C310.303 20.5749 478.896 109.327 521.665 135.224C643.086 208.745 707.045 166.282 776 171.257" />
                         {/* Filter for white glow effect */}
@@ -23,6 +24,7 @@ const Hero = () => {
                     <path
                         d="M7 33.6776C22.823 24.9424 80.0525 8.78236 182.386 14.0235C310.303 20.5749 478.896 109.327 521.665 135.224C643.086 208.745 707.045 166.282 776 171.257"
                         stroke="#f0f0f0"
+                        opacity={0.5}
                         strokeWidth="25"
                         filter="url(#glow1)"
                     />
@@ -56,6 +58,7 @@ const Hero = () => {
                         d="M11 430C21.2609 414.172 42.2851 369.972 44.2954 319.792C46.8083 257.067 21.0515 79.4442 173.08 38.4093C294.702 5.58129 620.369 11.4434 768 18.478"
                         stroke="#f0f0f0"
                         strokeWidth="25"
+                        opacity={0.5}
                         filter="url(#glow2)"
                     />
 
@@ -70,18 +73,20 @@ const Hero = () => {
                 <div className="container relative mx-auto h-full px-4">
                     <div className="xs:pt-28 flex h-full w-full pt-28 lg:top-1/4">
                         <div className="max-w-screen relative flex w-full flex-col gap-2 px-8 lg:px-0">
-                            <div className="absolute top-[5%] space-y-2 lg:left-[3%]">
-                                <h1 className="text-4xl tracking-tight md:text-5xl xl:text-2xl 2xl:text-3xl">
+                            <div className="absolute top-[5%] space-y-3 lg:left-[3%]">
+                                <h1 className="text-4xl tracking-tight md:text-5xl xl:text-4xl 2xl:text-5xl custom1:text-5xl">
                                     Timeless Living,
                                     <br />
                                     Backed by Science
                                 </h1>
-                                <p className="max-w-xs text-sm leading-tight text-gray-600 sm:max-w-sm sm:text-sm md:text-base">
+                                <p className="max-w-xs  text-sm leading-tight text-gray-600 sm:max-w-sm sm:text-sm md:text-base">
                                     CellScience Biotech, a cell health company that targets cellular health through mitochondrial health and enhances longevity.
                                 </p>
                                 <div>
-                                    <Button className="hidden items-center gap-2 rounded-md bg-black px-4 py-2 text-sm font-medium text-white lg:flex">
-                                        KNOW MORE <span className="text-sm">→</span>
+                                    <Button size={'sm'} className="hidden items-center gap-2 rounded-md font-bold bg-black  text-xs  text-white lg:flex">
+                                        KNOW MORE <span className="text-sm">
+                                            <ArrowRight />
+                                        </span>
                                     </Button>
                                     <CustomButton className="lg:hidden">KNOW MORE</CustomButton>
                                 </div>
@@ -99,7 +104,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="custom2:max-w-3xl absolute bottom-0 left-0 right-0 mx-auto flex h-[calc(100vh-20%)] max-h-[90vh] w-full max-w-2xl items-end justify-center sm:max-w-lg md:max-w-xl lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl">
+                    <div className="custom2:max-w-xl absolute bottom-0 left-0 right-0 mx-auto flex h-[calc(100vh-20%)] max-h-[90vh] w-full max-w-2xl items-end justify-center sm:max-w-lg md:max-w-2xl lg:max-w-2xl xl:max-w-2xl 2xl:max-w-5xl custom1:max-w-4xl">
                         <Image src="/hero.png" alt="hero" className="xs:scale-150 xs:-translate-y-20 h-fit w-auto" width={972} height={830} />
                     </div>
                 </div>
