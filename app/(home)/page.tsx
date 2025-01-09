@@ -1,13 +1,10 @@
-import Hero from "./sections/Hero";
+import Hero from './sections/Hero';
 
 export default function Home() {
     return (
-  <div>
-    <Hero/>
-    <div className="bg-red-100 h-[100vh]">
-
-    </div>
-  </div>
+        <div>
+            <Hero />
+            <div className="h-[100vh] bg-red-100"></div>
+        </div>
     );
-  }
-  
+}
