@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Hero = () => {
     return (
         <>
-            <section className="relative h-screen overflow-hidden ">
+            <section className="relative h-screen overflow-hidden">
                 {/* ribbon 1 */}
                 <svg width="777" height="192" viewBox="0 0 777 192" fill="none" className="absolute bottom-0 left-0 z-0 sm:-left-[25%] lg:-left-2">
                     <defs>
@@ -30,9 +30,13 @@ const Hero = () => {
                     />
 
                     {/* Text along the path */}
-                    <text className="font-medium" dy={5}>
-                        <textPath href="#curve1" startOffset="0%" className="animate-marquee fill-gray-600">
-                            Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now!
+                    <text className="text-xs font-semibold tracking-wide" dy={5}>
+                        <textPath href="#curve1" startOffset="0%" className="animate-marquee fill-[#3a3a3a]">
+                            {Array(18)
+                                .fill('Explore Now!')
+                                .map((text, index) => (
+                                    <tspan key={index}>{text} &nbsp;</tspan>
+                                ))}
                         </textPath>
                     </text>
                 </svg>
@@ -62,10 +66,13 @@ const Hero = () => {
                         filter="url(#glow2)"
                     />
 
-                    <text className="text-[16px] font-medium" dy={5}>
-                        <textPath href="#curve2" startOffset="0%" className="fill-gray-600">
-                            Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now! Explore Now!
-                            Explore Now! Explore Now! Explore Now! Explore Now! Explore Now!
+                    <text className="text-xs font-semibold tracking-wide" dy={5}>
+                        <textPath href="#curve2" startOffset="0%" className="fill-[#3a3a3a]">
+                            {Array(18)
+                                .fill('Explore Now!')
+                                .map((text, index) => (
+                                    <tspan key={index}>{text} &nbsp;</tspan>
+                                ))}
                         </textPath>
                     </text>
                 </svg>
@@ -73,18 +80,19 @@ const Hero = () => {
                 <div className="container relative mx-auto h-full px-4">
                     <div className="xs:pt-28 flex h-full w-full pt-28 lg:top-1/4">
                         <div className="max-w-screen relative flex w-full flex-col gap-2 px-8 lg:px-0">
-                            <div className="absolute top-[5%] space-y-3 lg:left-[3%]">
-                                <h1 className="text-4xl tracking-tight md:text-5xl xl:text-4xl 2xl:text-5xl custom1:text-5xl">
+                            <div className="absolute top-[5%] space-y-4 lg:left-[3%]">
+                                <h1 className="custom1:text-5xl text-4xl tracking-tight md:text-5xl xl:text-4xl 2xl:text-5xl">
                                     Timeless Living,
                                     <br />
                                     Backed by Science
                                 </h1>
-                                <p className="max-w-xs  text-sm leading-tight text-gray-600 sm:max-w-sm sm:text-sm md:text-base">
+                                <p className="max-w-xs text-sm leading-tight text-gray-600 sm:max-w-sm sm:text-sm md:text-base">
                                     CellScience Biotech, a cell health company that targets cellular health through mitochondrial health and enhances longevity.
                                 </p>
                                 <div>
-                                    <Button size={'sm'} className="hidden items-center gap-2 rounded-md font-bold bg-black  text-xs  text-white lg:flex">
-                                        KNOW MORE <span className="text-sm">
+                                    <Button size={'sm'} className="hidden items-center gap-2 rounded-md bg-black text-xs font-bold text-white lg:flex">
+                                        KNOW MORE{' '}
+                                        <span className="text-sm">
                                             <ArrowRight />
                                         </span>
                                     </Button>
@@ -104,7 +112,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="custom2:max-w-xl absolute bottom-0 left-0 right-0 mx-auto flex h-[calc(100vh-20%)] max-h-[90vh] w-full max-w-2xl items-end justify-center sm:max-w-lg md:max-w-2xl lg:max-w-2xl xl:max-w-2xl 2xl:max-w-5xl custom1:max-w-4xl">
+                    <div className="custom2:max-w-xl custom1:max-w-4xl absolute bottom-0 left-0 right-0 mx-auto flex h-[calc(100vh-20%)] max-h-[90vh] w-full max-w-2xl items-end justify-center sm:max-w-lg md:max-w-2xl lg:max-w-2xl xl:max-w-2xl 2xl:max-w-5xl">
                         <Image src="/hero.png" alt="hero" className="xs:scale-150 xs:-translate-y-20 h-fit w-auto" width={972} height={830} />
                     </div>
                 </div>
