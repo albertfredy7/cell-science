@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "mkhl.direnv",
+    "dbaeumer.vscode-eslint",
+    "cweijan.vscode-postgresql-client2",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "prisma.prisma",
+    "rodrigovallades.es7-react-js-snippets"
+  ],
+  "unwantedRecommendations": []
+}
